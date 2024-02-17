@@ -10,9 +10,15 @@
 #include "PlayerHeader.h"
 
 int main() {
+	int max_walls, height, width;
+	std::cout << "Welcome to console game...\nEneter height of the field: ";
+	std::cin >> height;
+	std::cout << "Well... Now enter the width of the field...\n";
+	std::cin >> width;
+	std::cout << "And now enter how fast will walls spanw...\n";
+	std::cin >> max_walls;
 	WindowEngine* window = new WindowEngine("WALKING GAME IN CONSOLE", 12, 10);
 	PlayerPawn* player = new PlayerPawn(window);
-	int max_walls = 3;
 	player->make_finish_point();
 	while (window->isWork)
 	{
