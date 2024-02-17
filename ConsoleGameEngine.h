@@ -8,7 +8,12 @@
 
 #define PIXEL_WIDTH_K 2 
 
-#define FPS 240
+#define FPS 60
+
+enum UI_Position {
+	TOP,
+	BOTTOM
+};
 
 class WindowEngine {
 public:
@@ -44,7 +49,11 @@ public:
 
 	void draw_frame();
 
+	void draw_frame(UI_Position ui_pos, const std::string ui_text);
+
 	void win_frame();
 
 	void loose_frame();
+
+	void make_briks(const int anum);
 };
