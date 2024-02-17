@@ -9,15 +9,24 @@
 #include "ConsoleGameEngine.h"
 #include "PlayerHeader.h"
 
+#define PRINT_ANIM_SPEED 10
+
+void print_with_anim(std::string text) {
+	for (char symb : text) {
+		std::cout << symb;
+		Sleep(PRINT_ANIM_SPEED);
+	}
+}
+
 int main() {
 	int max_walls, height, width;
-	std::cout << "Welcome to console game...\nEneter height of the field: ";
+	print_with_anim("Welcome to this console game...\nEnter the height of the field...\n");
 	std::cin >> height;
-	std::cout << "Well... Now enter the width of the field...\n";
+	print_with_anim("Well... Now enter the width of the field...\n");
 	std::cin >> width;
-	std::cout << "And now enter how fast will walls spanw...\n";
+	print_with_anim("And now enter how fast will walls spanw...\n");
 	std::cin >> max_walls;
-	WindowEngine* window = new WindowEngine("WALKING GAME IN CONSOLE", 12, 10);
+	WindowEngine* window = new WindowEngine("WALKING GAME IN CONSOLE", width, height);
 	PlayerPawn* player = new PlayerPawn(window);
 	player->make_finish_point();
 	while (window->isWork)
@@ -29,7 +38,7 @@ int main() {
 	}
 	Beep(900, 500);
 	std::system("cls");
-	std::cout << "\n\t\t>>>PRESS ANY KEY TO LEAVE A GAME<<<";
+	print_with_anim("\n\t\t>>>PRESS ANY KEY TO LEAVE A GAME<<<");
 	while (true)
 	{
 		if (_kbhit()) {
