@@ -4,8 +4,8 @@
 #include<vector>
 #include<iostream>
 
-#define EMPTY_CHAR '*'
-#define WALL_CHAR '#'
+#include "GraphicsChars.h"
+
 #define PIXEL_WIDTH_K 2 
 
 #define FPS 240

@@ -21,9 +21,14 @@
   <ItemGroup>
     <ClCompile Include="EngineSource.cpp" />
     <ClCompile Include="GameSource.cpp" />
+    <ClCompile Include="PlayerSource.cpp" />
+    <ClCompile Include="Random.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConsoleGameEngine.h" />
+    <ClInclude Include="GameRandom.h" />
+    <ClInclude Include="GraphicsChars.h" />
+    <ClInclude Include="PlayerHeader.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
