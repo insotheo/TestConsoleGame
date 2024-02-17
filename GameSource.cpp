@@ -12,8 +12,9 @@ int main() {
 	player->make_finish_point();
 	while (window->isWork)
 	{
-		
+		player->read_input();
+		player->move();
 		window->draw_frame();
 	}
-	std::cout << "GAME OVER!\n";
+	return 0;
 }

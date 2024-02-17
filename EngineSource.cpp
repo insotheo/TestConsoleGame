@@ -18,3 +18,19 @@ void WindowEngine::draw_frame() {
 	}
 	Sleep(FPS);
 }
+
+void WindowEngine::loose_frame() {
+	isWork = false;
+	std::system("cls");
+	std::system("title YOU LOOSE!");
+	std::system("color 4");
+	std::cout << "\tYOU LOOSE\n";
+}
+
+void WindowEngine::win_frame() {
+	isWork = false;
+	std::system("cls");
+	std::system("title YOU WIN!");
+	std::system("color 2");
+	std::cout << "\tYOU WON!\n";
+}

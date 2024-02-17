@@ -43,4 +43,8 @@ public:
 	}
 
 	void draw_frame();
+
+	void win_frame();
+
+	void loose_frame();
 };

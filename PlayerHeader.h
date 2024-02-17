@@ -17,6 +17,7 @@ public:
 	PlayerVector vector = PlayerVector::STOP;
 	unsigned int posX = 0;
 	unsigned int posY = 0;
+	const unsigned int speed = 1;
 
 	PlayerPawn(WindowEngine* window) {
 		game_window = window;
@@ -26,6 +27,10 @@ public:
 	}
 
 	void make_finish_point();
+
+	void read_input();
+
+	void move();
 
 private:
 	WindowEngine* game_window;
